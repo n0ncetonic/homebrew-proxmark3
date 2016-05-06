@@ -17,12 +17,12 @@ class Proxmark3 < Formula
   def install
     ENV.deparallelize
 
-    system "make", "-C", "client/hid-flasher/"
+##    system "make", "-C", "client/hid-flasher/"
     system "make", "all", "clean"
     system "make"
     bin.mkpath
     bin.install "client/flasher" => "proxmark3-flasher"
-    bin.install "client/hid-flasher/flasher" => "proxmark3-hid-flasher"
+##    bin.install "client/hid-flasher/flasher" => "proxmark3-hid-flasher"
     bin.install "client/proxmark3" => "proxmark3"
     bin.install "client/fpga_compress" => "fpga_compress"
     share.mkpath
