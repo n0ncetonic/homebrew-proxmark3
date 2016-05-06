@@ -17,8 +17,8 @@ class Proxmark3 < Formula
   def install
     ENV.deparallelize
 
-    system "make", "all", "clean"
-    system "make"
+    system "make", "clean"
+    system "make", "all"
     bin.mkpath
     bin.install "client/flasher" => "proxmark3-flasher"
     bin.install "client/proxmark3" => "proxmark3"
