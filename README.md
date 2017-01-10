@@ -1,5 +1,7 @@
-homebrew-proxmark3
-==================
+homebrew-tap
+============
+
+This fork comes from @Chrisfu  ref: https://github.com/chrisfu/homebrew-tap
 
 1. Install homebrew if you haven't yet already done so: http://brew.sh/
 

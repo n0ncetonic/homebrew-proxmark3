@@ -1,9 +1,11 @@
 class Proxmark3 < Formula
   desc "Proxmark3 client, flasher, HID flasher and firmware bundle"
   homepage "http://www.proxmark.org"
-  url "https://github.com/iceman1001/proxmark3/archive/v1.6.6.tar.gz"
-  sha256 "e28ff35e958e1665c04bd54ed740b57a2d54e5fd398f123aa42d1d90a32d93a5"
+  url "https://github.com/iceman1001/proxmark3/archive/v1.6.7.tar.gz"
+  sha256 "ddda40373acc564ac58e12f08d9b1b9916d5229b18dc4d48f39fc4883bd8a64f"
   head "https://github.com/iceman1001/proxmark3.git"
+
+											   
 
   depends_on "automake" => :build
   depends_on "readline"
@@ -12,15 +14,17 @@ class Proxmark3 < Formula
   depends_on "libusb-compat"
   depends_on "pkg-config" => :build
   depends_on "wget"
-  depends_on "nitsky/stm32/arm-none-eabi-gcc" => :build
+  depends_on "iceman/tap/arm-none-eabi-gcc" => :build
 
   def install
     ENV.deparallelize
 
-    system "make", "clean"
-    system "make", "all"
+    system "make", "-C", "client/hid-flasher/"
+    system "make", "all", "clean"
+    system "make"
     bin.mkpath
     bin.install "client/flasher" => "proxmark3-flasher"
+    bin.install "client/hid-flasher/flasher" => "proxmark3-hid-flasher"
     bin.install "client/proxmark3" => "proxmark3"
     bin.install "client/fpga_compress" => "fpga_compress"
     share.mkpath
