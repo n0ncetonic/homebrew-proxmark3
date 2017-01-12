@@ -14,7 +14,7 @@ class Proxmark3 < Formula
   depends_on "libusb-compat"
   depends_on "pkg-config" => :build
   depends_on "wget"
-  depends_on "iceman/tap/arm-none-eabi-gcc" => :build
+  depends_on "iceman1001/tap/arm-none-eabi-gcc" => :build
 
   def install
     ENV.deparallelize
