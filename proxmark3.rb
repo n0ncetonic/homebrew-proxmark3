@@ -19,19 +19,20 @@ class Proxmark3 < Formula
   def install
     ENV.deparallelize
 
-    system "make", "-C", "client/hid-flasher/"
+#    system "make", "-C", "client/hid-flasher/"
     system "make", "all", "clean"
     system "make"
     bin.mkpath
     bin.install "client/flasher" => "proxmark3-flasher"
-    bin.install "client/hid-flasher/flasher" => "proxmark3-hid-flasher"
+#    bin.install "client/hid-flasher/flasher" => "proxmark3-hid-flasher"
     bin.install "client/proxmark3" => "proxmark3"
     bin.install "client/fpga_compress" => "fpga_compress"
     share.mkpath
     (share/"firmware").mkpath
     (share/"firmware").install "armsrc/obj/fullimage.elf" => "fullimage.elf"
     (share/"firmware").install "bootrom/obj/bootrom.elf" => "bootrom.elf"
-    ohai "Install success! Upgrade devices on HID firmware with proxmark3-hid-flasher, or devices on more modern firmware with proxmark3-flasher."
+#    ohai "Install success! Upgrade devices on HID firmware with proxmark3-hid-flasher, or devices on more modern firmware with proxmark3-flasher."
+	ohai "Install success!  Only proxmark3-flasher (modern firmware) is available."
     ohai "The latest bootloader and firmware binaries are ready and waiting in the current homebrew Cellar within share/firmware."
   end
 
