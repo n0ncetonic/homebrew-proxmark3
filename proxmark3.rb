@@ -1,5 +1,6 @@
 class Proxmark3 < Formula
-  desc "Proxmark3 client, flasher, HID flasher and firmware bundle"
+#  desc "Proxmark3 client, flasher, HID flasher and firmware bundle"
+  desc "[icemanfork] Proxmark3 client, CDC flasher and firmware bundle"
   homepage "http://www.proxmark.org"
   url "https://github.com/iceman1001/proxmark3/archive/v1.6.7.tar.gz"
   sha256 "ddda40373acc564ac58e12f08d9b1b9916d5229b18dc4d48f39fc4883bd8a64f"
@@ -14,6 +15,7 @@ class Proxmark3 < Formula
   depends_on "libusb-compat"
   depends_on "pkg-config" => :build
   depends_on "wget"
+  depends_on "qt5"
   depends_on "iceman1001/proxmark3/arm-none-eabi-gcc" => :build
 
   def install
