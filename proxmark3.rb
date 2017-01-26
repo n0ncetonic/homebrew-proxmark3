@@ -15,7 +15,8 @@ class Proxmark3 < Formula
   depends_on "libusb-compat"
   depends_on "pkg-config" => :build
   depends_on "wget"
-  depends_on "qt"
+  depends_on "qt5"
+  depends_on "perl"
   depends_on "iceman1001/proxmark3/arm-none-eabi-gcc" => :build
 
   def install
