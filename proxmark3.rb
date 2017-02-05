@@ -23,8 +23,8 @@ class Proxmark3 < Formula
     ENV.deparallelize
 
 #    system "make", "-C", "client/hid-flasher/"
-    system "make", "all", "clean"
-    system "make"
+    system "make", "clean"	  
+    system "make", "all"
     bin.mkpath
     bin.install "client/flasher" => "proxmark3-flasher"
 #    bin.install "client/hid-flasher/flasher" => "proxmark3-hid-flasher"
