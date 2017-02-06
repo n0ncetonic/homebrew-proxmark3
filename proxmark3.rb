@@ -2,8 +2,8 @@ class Proxmark3 < Formula
 #  desc "Proxmark3 client, flasher, HID flasher and firmware bundle"
   desc "[icemanfork] Proxmark3 client, CDC flasher and firmware bundle"
   homepage "http://www.proxmark.org"
-  url "https://github.com/iceman1001/proxmark3/archive/v1.6.8.tar.gz"
-  sha256 "2171042a0d371407f2d67ed49fb50a48d5a3feb814e5eeaf6ca49d88a71f8098"
+  url "https://github.com/iceman1001/proxmark3/archive/v1.6.9.tar.gz"
+  sha256 "ef1f678e22cd90af71de78894ae41f394c587a79f50d3227fd66fa5c848d7951"
   head "https://github.com/iceman1001/proxmark3.git"
 
 											   
