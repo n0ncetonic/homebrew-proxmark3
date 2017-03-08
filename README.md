@@ -21,12 +21,13 @@ The old HID-flasher doesn't compile on this version. You'll need to manually fix
 Current release version is v1.7.0 (https://github.com/iceman1001/proxmark3/releases/tag/v1.7.0)
 
 
-Maintainers:
-    (original)
+###Maintainers
+
+    original
     [chrisfu](https://github.com/chrisfu/homebrew-tap)
 
-    (fork)
+    fork
     [iceman1001](https://github.com/iceman1001/homebrew-proxmark3)
-	
-    (testing)
+
+    testing
     [zhovner](https://github.com/zhovner)
