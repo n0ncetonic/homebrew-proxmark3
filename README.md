@@ -23,6 +23,6 @@ Current release version is v1.7.0 (https://github.com/iceman1001/proxmark3/relea
 
 ###Maintainers
 
-original:: [chrisfu](https://github.com/chrisfu/homebrew-tap), [zhovner](https://github.com/zhovner)
+original [chrisfu](https://github.com/chrisfu/homebrew-tap), [zhovner](https://github.com/zhovner)
 
-fork:: [iceman1001](https://github.com/iceman1001/homebrew-proxmark3)
+fork [iceman1001](https://github.com/iceman1001/homebrew-proxmark3)
