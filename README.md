@@ -25,8 +25,8 @@ Maintainers:
     (original)
     [chrisfu](https://github.com/chrisfu/homebrew-tap)
 
-	(fork)
-	[iceman1001](https://github.com/iceman1001/homebrew-proxmark3)
+    (fork)
+    [iceman1001](https://github.com/iceman1001/homebrew-proxmark3)
 	
-	(testing)
-	[zhovner](https://github.com/zhovner)
+    (testing)
+    [zhovner](https://github.com/zhovner)
