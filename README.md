@@ -16,6 +16,26 @@ The old HID-flasher doesn't compile on this version. You'll need to manually fix
     `brew install proxmark3` for stable release 
 	`brew install --HEAD proxmark3` for latest non-stable from GitHub (use this if previous command fails)
 
+	 
+### Usage
+
+Proxmark3 will be installed in `/usr/local/bin/proxmark3`  
+
+Firmware located at `/usr/local/share/firmware/`  
+
+
+#### Connect to device
+`proxmark3 /dev/tty.usbmodemXXXX` 
+
+
+#### Flashing firmware  
+`sudo proxmark3-flasher /dev/tty.usbmodemXXXX /usr/local/share/firmware/fullimage.elf`  
+
+
+#### Flashing bootloader  
+`sudo proxmark3-flasher -b /dev/tty.usbmodemXXXX /usr/local/share/firmware/bootrom.elf`  
+
+	
 ### Info
 
 Current release version is v1.7.0 (https://github.com/iceman1001/proxmark3/releases/tag/v1.7.0)
