@@ -1,5 +1,4 @@
 class Proxmark3 < Formula
-#  desc "Proxmark3 client, flasher, HID flasher and firmware bundle"
   desc "[icemanfork] Proxmark3 client, CDC flasher and firmware bundle"
   homepage "http://www.proxmark.org"
   url "https://github.com/iceman1001/proxmark3/archive/v3.0.0.tar.gz"
@@ -32,13 +31,14 @@ class Proxmark3 < Formula
 #	bin.install "tools/mfkey/mfkey32" => "mfkey32"
 #	bin.install "tools/mfkey/mfkey64" => "mfkey64"
 
-	#default keys
+	# default keys
 	bin.install "client/default_keys.dic" => "default_keys.dic"
 	bin.install "client/default_pwd.dic" => "default_pwd.dic"
 	
-	# hardnested binary bit_flip files
+	# hardnested files
 	(bin/"hardnested").mkpath
-	(bin/"hardnested").install Dir["client/hardnested/*"]
+	(bin/"hardnested").install "client/hardnested/bf_bench_data.bin"
+	(bin/"hardnested/tables").install Dir["client/hardnested/tables/*"]	
 
 	# lua libs for proxmark3 scripts
 	(bin/"lualibs").mkpath
@@ -52,7 +52,8 @@ class Proxmark3 < Formula
 	(bin/"traces").mkpath
 	(bin/"traces").install Dir["traces/*"]
 
-    share.mkpath
+	# compiled firmware for flashing
+    share.mkpath	
     (share/"firmware").mkpath
     (share/"firmware").install "armsrc/obj/fullimage.elf" => "fullimage.elf"
     (share/"firmware").install "bootrom/obj/bootrom.elf" => "bootrom.elf"
