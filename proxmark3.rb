@@ -1,8 +1,8 @@
 class Proxmark3 < Formula
   desc "[icemanfork] Proxmark3 client, CDC flasher and firmware bundle"
   homepage "http://www.proxmark.org"
-  url "https://github.com/iceman1001/proxmark3/archive/v3.0.0.tar.gz"
-  sha256 "c62f67f5d037af002aeb2987289c8e593b8850ebb10cebc37293f3f3695bd032"
+  url "https://github.com/iceman1001/proxmark3/archive/ice_v3.1.0.tar.gz"
+  sha256 "bc19f98c661304db5a79e07b44b2f16ef5229b490985dc1d87e6f494a6729558"
   head "https://github.com/iceman1001/proxmark3.git"
 
   depends_on "automake" => :build

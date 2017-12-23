@@ -38,7 +38,7 @@ Firmware located at `/usr/local/share/firmware/`
 	
 ### Info
 
-Current release version is v3.0.0 (https://github.com/iceman1001/proxmark3/releases/tag/v3.0.0)
+Current release version is ice_v3.1.0 (https://github.com/iceman1001/proxmark3/releases/tag/ice_v3.1.0)
 
 
 ###Maintainers
