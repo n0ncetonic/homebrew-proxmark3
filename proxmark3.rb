@@ -52,15 +52,20 @@ class Proxmark3 < Formula
 	(bin/"traces").mkpath
 	(bin/"traces").install Dir["traces/*"]
 
+	# emv public keys file
+	(bin/"emv").mkpath
+	(bin/"emv").install "client/emv/capk.txt"
+
+	
 	# compiled firmware for flashing
-    share.mkpath	
-    (share/"firmware").mkpath
-    (share/"firmware").install "armsrc/obj/fullimage.elf" => "fullimage.elf"
-    (share/"firmware").install "bootrom/obj/bootrom.elf" => "bootrom.elf"
-#    ohai "Install success! Upgrade devices on HID firmware with proxmark3-hid-flasher, or devices on more modern firmware with proxmark3-flasher."
+	share.mkpath	
+	(share/"firmware").mkpath
+	(share/"firmware").install "armsrc/obj/fullimage.elf" => "fullimage.elf"
+	(share/"firmware").install "bootrom/obj/bootrom.elf" => "bootrom.elf"
+#	ohai "Install success! Upgrade devices on HID firmware with proxmark3-hid-flasher, or devices on more modern firmware with proxmark3-flasher."
 	ohai "Install success!  Only proxmark3-flasher (modern firmware) is available."
-    ohai "The latest bootloader and firmware binaries are ready and waiting in the current homebrew Cellar within share/firmware."
-  end
+	ohai "The latest bootloader and firmware binaries are ready and waiting in the current homebrew Cellar within share/firmware."
+	end
 
   test do
     system "proxmark3", "-h"
