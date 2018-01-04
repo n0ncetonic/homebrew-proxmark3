@@ -54,7 +54,7 @@ class Proxmark3 < Formula
 
 	# emv public keys file
 	(bin/"emv").mkpath
-	(bin/"emv").install "client/emv/capk.txt"
+#	(bin/"emv").install "client/emv/capk.txt"
 	
 	# compiled firmware for flashing
 	share.mkpath	
