@@ -3,7 +3,7 @@ class Proxmark3 < Formula
   homepage "http://www.proxmark.org"
   url "https://github.com/iceman1001/proxmark3/archive/ice_v3.1.0.tar.gz"
   sha256 "bc19f98c661304db5a79e07b44b2f16ef5229b490985dc1d87e6f494a6729558"
-  head "https://github.com/iceman1001/proxmark3.git"
+  head "https://github.com/n0ncetonic/proxmark3.git"
 
   depends_on "automake" => :build
   depends_on "readline"
